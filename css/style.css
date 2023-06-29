@@ -39,7 +39,7 @@ html{
 
 .heading{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--Very-Dark-Blue);
     margin-top: 10rem;
     margin-bottom: 1rem;
@@ -75,7 +75,7 @@ html{
 
 
 :root{
-    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Blue: hsl(231, 71%, 31%);
     --Soft-Red: hsl(0, 94%, 66%);
     --Grayish-Blue: hsl(229, 8%, 60%);
     --Very-Dark-Blue: hsl(229, 31%, 21%);
@@ -290,9 +290,9 @@ html{
 
 
 .features .row .content h1{
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 1rem 0;
-    color: var(--Very-Dark-Blue);
+    color: var(--Soft-Blue);
 }
 
 
@@ -331,7 +331,7 @@ html{
 .download .box h3{
     font-size: 2rem;
     padding: 1rem 0;
-    color: var(--Very-Dark-Blue);
+    color: var(--Soft-Blue);
 }
 
 
