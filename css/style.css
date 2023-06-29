@@ -42,7 +42,7 @@ html{
     font-size: 2rem;
     color: var(--Very-Dark-Blue);
     margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -381,8 +381,8 @@ html{
     padding-top: 2rem;
     margin-top: 2rem;
     text-align: center;
-    font-size: 2rem;
-    color: #000;
+    font-size: 1rem;
+    color: #524949;
     border-top: .1rem solid rgba(0, 0, 0, .1);
 }
 
