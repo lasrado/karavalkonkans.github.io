@@ -2173,7 +2173,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
+		background: #fff url("../../images/mangalorebeach.jpeg");
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -2198,7 +2198,7 @@ input, select, textarea {
 			}
 
 			#banner header p {
-				color: #99a8e5;
+				color: #fff;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
