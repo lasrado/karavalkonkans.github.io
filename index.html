@@ -223,79 +223,18 @@
 				</section>
 
 			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-								<section>
-									<header>
-										<h2>Future events</h2>
-									</header>
-									<ul class="dates">
-										<li>
-											<span class="date">Mar <strong>2</strong></span>
-											<h3><a href="events.html#">Konkani Classes</a></h3>
-											<p>Konkani classes presented by Mandd Sobhan in association with Karaval Konkans Australia</p>
-										</li>
-										<li>
-											<span class="date">Apr <strong>13</strong></span>
-											<h3><a href="events.html#">Kursachi Vaat</a></h3>
-											<p>Come join us to adore our Lord by joining the stations of the cross in Konakani</p>
-										</li>
-										<li>
-											<span class="date">Jun <strong></strong>--</span>
-											<h3><a href="events.html">Konkani Day</a></h3>
-											<p>Let's celebrate our mother tounge Konkani on this special day in June.</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<header>
-										<h2>Contact Us</h2>
-									</header>
-									<ul class="social">
-										<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/karavalkonkansaustralia/" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a class="icon brands fa-instagram" href="https://www.instagram.com/karavalkonkansaustralia/" target="_blank"><span class="label">Instagram</span></a></li>
-										<li><a class="icon brands fa-whatsapp" href="https://chat.whatsapp.com/FFFpMT3MXL139IeqiJvoR1" target="_blank"><span class="label">Whatsapp</span></a></li>
-										<li><a class="icon brands fa-youtube" href="https://www.youtube.com/@KaravalKonkansAustralia" target="_blank"><span class="label">Youtube</span></a></li>
-										
-									</ul>
-									<ul class="contact">
-										<!--<li>
-											<h3>Address</h3>
-											<p>
-												Untitled Incorporated<br />
-												1234 Somewhere Road Suite<br />
-												Nashville, TN 00000-0000
-											</p>
-										</li>-->
-										<li>
-											<h3>Email</h3>
-											<p><a href="#">info@karavalkonkans.org.au</a></p>
-										</li>
-										<!--<li>
-											<h3>Phone</h3>
-											<p>(800) 000-0000</p>
-										</li>-->
-									</ul>
-								</section>
-							</div>
-							
-							<div class="col-12">
+			<script src="assets/js/events.js"></script>
+			<div id="footer"></div>
+			<script>
+				fetch('./footer.html')
+					.then(res => res.text())
+					.then(html => {
+						document.getElementById('footer').innerHTML = html;
+					})
+					.catch(err => console.error('Failed to load footer:', err));
 
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; Karaval Konkans Australia Inc. All rights reserved.</li>
-										</ul>
-									</div>
-
-							</div>
-						</div>
-					</div>
-				</section>
+					fetchFooterEvents();
+			  </script>
 
 		</div>
 

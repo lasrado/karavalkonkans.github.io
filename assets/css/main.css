@@ -1601,6 +1601,22 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
+		.box.post div header {
+			padding-top: 1em;
+			margin: 0 0 2em 0;
+		}
+
+		.box.post div h2 {
+			font-size: 2.5em;
+			letter-spacing: -0.015em;
+		}
+
+		.box.post div header > p {
+			margin-top: 1.25em;
+			font-size: 1.25em;
+		}
+
+
 /* Button */
 
 	input[type="button"],
@@ -2924,3 +2940,65 @@ input, select, textarea {
 	height: 100%;
   }
   
+  .centered-container {
+	max-width: 930px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 16px;
+  }
+
+  .btn-facebook {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #1877f2;  /* Facebook Blue */
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
+  }
+  
+  .btn-facebook:hover {
+	background-color: #145dbf;
+  }
+  
+  hr {
+	border: none;
+	border-top: 1px solid #ddd;
+	margin: 16px 0;
+  }
+
+  #tabs {
+	margin-bottom: 1rem;
+  }
+  
+  .tab-button {
+	padding: 8px 20px;
+	margin-right: 8px;
+	border: none;
+	background-color: #eee;
+	cursor: pointer;
+	border-radius: 4px 4px 0 0;
+	font-weight: 600;
+  }
+  
+  .tab-button.active {
+	background-color: #1877f2;
+	color: white;
+  }
+  
+  .tab-content {
+	border: 1px solid #ddd;
+	padding: 1rem;
+	max-width: 930px;
+	margin: 0 auto;
+	text-align: left;
+  }
+
+  .description {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;       /* Limit to 2 lines */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }

@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -45,114 +46,35 @@
 			<!-- Main -->
 				<!-- Main -->
 			<section id="main">
-				<div class="container">
-
-					<!-- Content -->
-						<article class="box post">
-							<span class="date" id="payann_vic">Nov <strong>17</strong></span>
-							<header>
-								<h2>Konkani Movie Premier - Payann</h2>
-							</header>
-							
-							<p>
-								Come join us in celebrating and supporting the new Konkani movie in the Monash Cinema, Clayton, Victoria.
-							</p>
-							<a href="#" class="image"><img src="images/payann_melb.jpeg" alt="" /></a>
-							<br><br><br>
-							<span class="date" id="kuswar">Nov <strong>23</strong></span>
-							<header>
-								<h2>Mai so Kuswar</h2>
-							</header>
-							<a href="#" class="image"><img src="images/kuswar.jpg" alt="" /></a>
-							<br><br><br>
-							<span class="date" id="natalan">Dec <strong>15</strong></span>
-							<header>
-								<h2>Natalan Fest</h2>
-							</header>
-							<p>
-								Kick start the festivities with a whole community Christmas celebration. Venue details will be shared soon.
-							</p>
-							
-							
-						</article>
+				
+				<!-- Content -->
+				
+							<div id="tabs" class="centered-container">
+								<button class="tab-button active" data-tab="upcoming">Upcoming Events</button>
+								<button class="tab-button" data-tab="past">Past Events</button>
+							  </div>
+							  
+							  <div id="events-upcoming" class="tab-content"></div>
+							  <div id="events-past" class="tab-content" style="display:none;"></div>
+						
 
 				</div>
 			</section>
 
 			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-								<section>
-									<header>
-										<h2>Future events</h2>
-									</header>
-									<ul class="dates">
-										<li>
-											<span class="date">Mar <strong>2</strong></span>
-											<h3><a href="events.html#">Konkani Classes</a></h3>
-											<p>Konkani classes presented by Mandd Sobhan in association with Karaval Konkans Australia</p>
-										</li>
-										<li>
-											<span class="date">Apr <strong>13</strong></span>
-											<h3><a href="events.html#">Kursachi Vaat</a></h3>
-											<p>Come join us to adore our Lord by joining the stations of the cross in Konakani</p>
-										</li>
-										<li>
-											<span class="date">Jun <strong></strong>--</span>
-											<h3><a href="events.html">Konkani Day</a></h3>
-											<p>Let's celebrate our mother tounge Konkani on this special day in June.</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section>
-									<header>
-										<h2>Contact Us</h2>
-									</header>
-									<ul class="social">
-										<li><a class="icon brands fa-facebook-f" href="https://www.facebook.com/karavalkonkansaustralia/" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a class="icon brands fa-instagram" href="https://www.instagram.com/karavalkonkansaustralia/" target="_blank"><span class="label">Instagram</span></a></li>
-										<li><a class="icon brands fa-whatsapp" href="https://chat.whatsapp.com/FFFpMT3MXL139IeqiJvoR1" target="_blank"><span class="label">Whatsapp</span></a></li>
-										<li><a class="icon brands fa-youtube" href="https://www.youtube.com/@KaravalKonkansAustralia" target="_blank"><span class="label">Youtube</span></a></li>
-										
-									</ul>
-									<ul class="contact">
-										<!--<li>
-											<h3>Address</h3>
-											<p>
-												Untitled Incorporated<br />
-												1234 Somewhere Road Suite<br />
-												Nashville, TN 00000-0000
-											</p>
-										</li>-->
-										<li>
-											<h3>Email</h3>
-											<p><a href="#">info@karavalkonkans.org.au</a></p>
-										</li>
-										<!--<li>
-											<h3>Phone</h3>
-											<p>(800) 000-0000</p>
-										</li>-->
-									</ul>
-								</section>
-							</div>
-							
-							<div class="col-12">
+			<script src="assets/js/events.js"></script>
+			<div id="footer"></div>
+			<script>
+				fetch('./footer.html')
+					.then(res => res.text())
+					.then(html => {
+						document.getElementById('footer').innerHTML = html;
+					})
+					.catch(err => console.error('Failed to load footer:', err));
 
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; Karaval Konkans Australia Inc. All rights reserved.</li>
-										</ul>
-									</div>
-
-							</div>
-						</div>
-					</div>
-				</section>
+					fetchFooterEvents();
+			  </script>
+				
 
 		</div>
 
@@ -163,6 +85,56 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 
 	</body>
+	<script>
+
+	
+
+		// fetch("http://localhost:8888/.netlify/functions/fetch-events")
+		// .then(res => res.json())
+		// .then(data => {
+		// 	const container = document.getElementById("events");
+		// 	data.data.forEach(event => {
+		// 	const div = document.createElement("div");
+		// 	div.className = 'centered-container';
+		// 	div.innerHTML = `
+		// 		<span class="date" id="${event.id}">${formatDateToShortMonth(event.start_time)}</span>
+		// 		<header>
+		// 			<h2>${event.name}</h2>
+		// 		</header>
+							
+		// 		<p>
+		// 			${event.description}
+		// 		</p>
+		// 		${event.cover ? `<img src="${event.cover.source}" width="300">` : ""}
+		// 		<p><a href="https://www.facebook.com/events/${event.id}" target="_blank" class="btn-facebook">View on Facebook</a></p>
+
+		// 	`;
+		// 	container.appendChild(div);
+		// 	// Add divider line after each event except last
+		// 	if (event !== data.data[data.data.length - 1]) {
+		// 		const hr = document.createElement("hr");
+		// 		container.appendChild(hr);
+		// 	}
+		// 	});
+		// });
+
+		
+
+// Fetch events and initialize
+fetch("https://kkaapi.netlify.app/.netlify/functions/fetch-events")
+  .then(res => res.json())
+  .then(data => {
+    renderEvents(data.data);
+    setupTabs();
+  })
+  .catch(() => {
+    document.getElementById("events-upcoming").innerHTML = "<p>Failed to load events.</p>";
+  });
+
+
+
+	</script>
 </html>
