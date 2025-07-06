@@ -90,38 +90,6 @@
 	</body>
 	<script>
 
-	
-
-		// fetch("http://localhost:8888/.netlify/functions/fetch-events")
-		// .then(res => res.json())
-		// .then(data => {
-		// 	const container = document.getElementById("events");
-		// 	data.data.forEach(event => {
-		// 	const div = document.createElement("div");
-		// 	div.className = 'centered-container';
-		// 	div.innerHTML = `
-		// 		<span class="date" id="${event.id}">${formatDateToShortMonth(event.start_time)}</span>
-		// 		<header>
-		// 			<h2>${event.name}</h2>
-		// 		</header>
-							
-		// 		<p>
-		// 			${event.description}
-		// 		</p>
-		// 		${event.cover ? `<img src="${event.cover.source}" width="300">` : ""}
-		// 		<p><a href="https://www.facebook.com/events/${event.id}" target="_blank" class="btn-facebook">View on Facebook</a></p>
-
-		// 	`;
-		// 	container.appendChild(div);
-		// 	// Add divider line after each event except last
-		// 	if (event !== data.data[data.data.length - 1]) {
-		// 		const hr = document.createElement("hr");
-		// 		container.appendChild(hr);
-		// 	}
-		// 	});
-		// });
-
-		
 
 // Fetch events and initialize
 fetch("https://kkaapi.netlify.app/.netlify/functions/fetch-events")

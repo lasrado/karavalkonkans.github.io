@@ -21,10 +21,10 @@ function createEventHTML(event) {
         <h2>${event.name}</h2>
     </header>
     <p>
-        ${event.description}
+        ${event.description.replace(/\n/g, "<br>")}
     </p>
-    ${event.cover ? `<img src="${event.cover.source}" width="300" alt="Event Image" />` : ""}
-    <p><a href="${eventLink}" target="_blank" class="btn-facebook">View on Facebook</a></p>
+    ${event.cover ? `<img style="width:100%" src="${event.cover.source}" width="300" alt="Event Image" />` : ""}
+    <p style="text-align:center"><a href="${eventLink}" target="_blank" class="btn-facebook">View on Facebook</a></p>
     </div>
     <hr/>
     `;
@@ -68,7 +68,7 @@ function createFooterEventHTML(event) {
     return `
       <li>
           <span class="date">${month} <strong>${day}</strong></span>
-          <h3><a href="events.html#">${event.name}</a></h3>
+          <h3><a href="events.html#${event.id}">${event.name}</a></h3>
           <p class="description">${event.description}</p>
       </li>
     `;
