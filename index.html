@@ -11,31 +11,22 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
+			
 				<section id="header">
-
-					<!-- Logo -->
-					<h1><a href="index.html"><img src="images/logo.jpeg"></a></h1>
-						<h1><a href="index.html">Karaval Konkans Australia</a></h1>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li>
-									<a href="#gallery">Gallery</a>
-								</li>
-								<li><a href="events.html">Events</a></li>
-								<li><a href="index.html#news">News</a></li>
-								<li><a href="aboutus.html">About us</a></li>
-								<li><a href="signup.html">Signup</a></li>
-							</ul>
-						</nav>
+					<div id="menubar"></div>
+					<script>
+						fetch('./header.html')
+							.then(res => res.text())
+							.then(html => {
+								document.getElementById('menubar').innerHTML = html;
+							})
+					</script>
 
 					<!-- Banner -->
 						<section id="banner">
 							<header>
-								<h2>Welcome to all Konkani speakers in Australia</h2>
-								<p>Let's preserve and promote the essence of our rich Konkani heritage through events and activities.</p>
+								<h2>Celebrating the Spirit of Konkani in Australia</h2>
+								<p>Join us in preserving our vibrant heritage through community, culture, and connection.</p>
 							</header>
 						</section>
 
