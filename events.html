@@ -14,14 +14,17 @@
 			<!-- Header -->
 				<section id="header">
 
-					<div id="menubar"></div>
-					<script>
-						fetch('./header.html')
-							.then(res => res.text())
-							.then(html => {
-								document.getElementById('menubar').innerHTML = html;
-							})
-					</script>
+					<h1><a href="index.html"><img src="images/kka_logo.png" alt="Logo" class="logo"></a></h1>
+					<nav id="nav">
+					  <ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li class="current"><a href="events.html">Events</a></li>
+						<li><a href="index.html#news">News</a></li>
+						<li><a href="aboutus.html">About us</a></li>
+						<li><a href="signup.html">Signup</a></li>
+					  </ul>
+					</nav>
 
 					<!-- Banner -->
 						<section id="banner">
